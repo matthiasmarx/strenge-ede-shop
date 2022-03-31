@@ -1,0 +1,32 @@
+#template_header
+    #template_main_nav
+        border-top: $borderWidth solid #fff
+        border-left: calc(#{$borderWidth} * 0.75) solid #fff
+        border-bottom: 0
+        position: relative
+        z-index: 9
+        &::before, &::after
+            content:""
+            background: #fff
+            width: 100vw
+            height: $borderWidth
+            bottom: 100%
+            position: absolute
+            z-index: -1
+        &::before
+            right: 100%
+        &::after
+            left: 100%
+
+        // Nav Items
+        > li 
+            border-right: calc(#{$borderWidth} * 0.75) solid #fff
+            > a 
+                color: $darkblue
+                font-size: 15px
+                transition: ease all 300ms
+                border: 0
+                &:hover, &.active
+                    background: $lightred
+
+

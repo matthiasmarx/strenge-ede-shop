@@ -1,0 +1,49 @@
+@import './_desktopNavigation', './search', './buttons'
+
+
+
+#template_header
+    background: $lightgrey
+    position: relative
+    z-index: 99
+    &::before, &::after
+        content:""
+        background: $lightgrey
+        width: 100vw
+        height: 100%
+        top: 0
+        position: absolute
+        z-index: -1
+    &::before
+        right: 100%
+    &::after
+        left: 100%
+
+
+// Logo
+#template_header
+    #template_logo
+        background: $lightred
+        padding: 30px 80px 30px 5px
+        border-right: $borderWidth solid #fff
+        position: relative
+        &::before
+            content:""
+            background: $lightred
+            width: 100vw
+            height: 100%
+            top: 0
+            right: 100%
+            position: absolute
+            z-index: -1
+
+        img 
+            max-width: 200px
+
+// Search and Buttons
+#template_header_list
+    padding-top: 8px
+    display: flex
+    align-items: center
+    flex-direction: row-reverse
+    justify-content: flex-start
