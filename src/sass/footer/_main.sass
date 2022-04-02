@@ -1,0 +1,30 @@
+@import './footerBadges', './footerInfoCols'
+#template_footer
+    background: transparent 
+    color: $textColor
+    max-width: initial
+    padding: 0
+    .template_footer_row
+        display: flex 
+        flex-direction: column
+        .template_footer_container 
+            width: 100%
+            padding: 0
+
+            &:nth-child(1)
+                background: $red
+            &:nth-child(2)
+                background: $grey
+                color: #fff
+                margin-bottom: 0
+            &:nth-child(3), &:nth-child(4), &:nth-child(5)
+                display: none
+            
+            .user_content
+                max-width: $pageWidth
+                margin: 0 auto
+                padding: 0 20px
+                box-sizing: border-box
+
+#sub_template_footer
+    display: none

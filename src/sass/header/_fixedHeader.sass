@@ -1,11 +1,10 @@
-@import './_desktopNavigation', './search', './buttons', './cartPopup', './fixedHeader'
-
-
-
-#template_header
+#sticky_menu 
     background: $lightgrey
+    border-bottom: 0
     position: relative
-    z-index: 99
+    //display: flex
+    //justify-content: space-between
+    //align-items: center
     &::before, &::after
         content:""
         background: $lightgrey
@@ -19,14 +18,25 @@
     &::after
         left: 100%
 
+    .top_navi
+        width: 100%
+        display: flex
+        max-width: 1200px
+        margin: 0 auto
 
-// Logo
-#template_header
-    #template_logo
+    #template_header_list
+        padding-left: 40px
+
+    
+    // Logo
+    .sticky_logo_mini_position
         background: $lightred
-        padding: 30px 80px 30px 5px
+        padding: 20px 80px 20px 5px
         border-right: $borderWidth solid #fff
         position: relative
+        display: flex
+        align-items: center
+        justify-content: center
         &::before
             content:""
             background: $lightred
@@ -39,11 +49,4 @@
 
         img 
             max-width: 200px
-
-// Search and Buttons
-#template_header_list
-    padding-top: 8px
-    display: flex
-    align-items: center
-    flex-direction: row-reverse
-    justify-content: flex-start
+            margin: 0

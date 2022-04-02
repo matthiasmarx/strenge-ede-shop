@@ -1,0 +1,41 @@
+.loginTypes .styledForm
+    input[type="submit"], input[type="button"], button, .button, .submit
+        font-family: $font
+        border-radius: 50px
+        border: 3px solid $lightgrey
+        background: $lightgrey
+        padding: 10px 30px
+        &:hover 
+            background: transparent
+            color: $textColor
+    button.submit_green, input.submit_green, .submit_green
+        border: 3px solid $lightred
+        background: $lightred
+        border-radius: 50px
+        &:hover 
+            background: transparent
+            color: $lightred
+
+    .contentBlock input[type=button], .styledForm button, .styledForm input[type=submit]
+        border-radius: 50px
+
+    .row, .contentBlock .row
+        padding-bottom: 5px
+
+input.submit_green.registration_button.large
+    font-family: $font
+    border: 3px solid $lightred
+    background: $lightred
+    border-radius: 50px
+    &:hover 
+        background: transparent
+        color: $lightred
+// HEader Row of Login Boxes
+.contentBlock .row.header, .styledForm .row.header
+    background: $darkblue
+    border-bottom-color: $lightgrey
+
+// Account PopUp
+.account_popup_register
+    > b 
+        color: $darkblue
