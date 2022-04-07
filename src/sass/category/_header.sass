@@ -1,0 +1,94 @@
+$catBorderW: 5px
+
+.user_content
+    .cat-header
+        display: flex
+        align-items: stretch
+        flex-wrap: wrap
+        margin-bottom: $catBorderW
+        div 
+            box-sizing: border-box
+        .cat-headline
+            background: $lightbg
+            padding: 15px
+            width: 66.66%
+            border-right: $catBorderW solid #fff
+            h2 
+                color: $red
+                font-size: 35px
+                text-transform: uppercase
+                letter-spacing: 2px
+                margin: 0
+        
+        div:last-child
+            background: $lightred
+            color: #fff
+            padding: 15px
+            width: 33.34%
+            text-align: right
+            display: flex
+            flex-direction: column
+            align-items: flex-end
+            justify-content: flex-end
+            position: relative
+            overflow: hidden
+            &::before
+                content: ""
+                position: absolute
+                left: 0
+                bottom: -10px
+                height: 80%
+                width: 40%
+                background-image: url(#{$path}phone.png)
+                background-size: contain
+                background-repeat: no-repeat
+                background-position: center bottom
+                opacity: .15
+            span
+                display: block
+            b 
+                font-size: 1.6em
+
+    .cat-image-holder
+        display: flex
+        flex-wrap: wrap
+        div 
+            box-sizing: border-box
+        .image-holder 
+            position: relative
+            img 
+                position: absolute
+                top: 0
+                left: 0
+                height: 100%
+                width: 100%
+                object-fit: cover 
+
+        .big-image-text
+            width: 80%
+            border-right: $catBorderW solid #fff
+            padding-bottom: 36%
+            .overlay-text
+                position: absolute
+                bottom: 20px
+                left: 20px
+                //background: rgba( #{$lightredR} , #{$lightredG}, #{$lightredB}, .5)    
+                background: rgba(169,19,74,.8)
+                z-index: 5
+                color: #fff
+                font-weight: 900
+                padding: 15px
+                font-size: 1.5em
+                margin-right: auto
+                max-width: 350px
+
+
+
+        .cat-sm-images
+            width: 20%
+            .image-holder
+                &:first-child
+                    height: 45%
+                &:last-child
+                    border-top: $catBorderW solid #fff
+                    height: 55%
