@@ -1,0 +1,42 @@
+#finder.finder_box
+    background-color: $grey
+    color: #fff
+    padding: 1em 1em calc(1em - 5px) 1em
+
+    .main_caption
+        border: 0
+        color: #fff
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: 0 !important
+        margin-bottom: 0
+        margin-top: -14px
+
+        .light.red_color_hover
+            background: $lightred
+            padding: 10px 20px
+            border-radius: 50px
+            color: #fff
+            line-height: 1
+            display: flex
+            align-items: center
+            justify-content: center
+            transition: ease all 400ms
+            &:hover
+                background: #fff
+                > *
+                    color: $lightred
+
+            .mobile_hide_mini
+                margin-right: 5px
+
+    > ul
+        > li
+            width: calc(33.33% - 5px)
+            box-sizing: border-box
+            margin: 0
+            margin-right: 5px
+            margin-bottom: 5px
+            > input.finder_toggle, > a.click_toggle
+                    background-color: rgba(255, 255, 255, 1)

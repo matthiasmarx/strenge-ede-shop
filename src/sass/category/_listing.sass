@@ -1,0 +1,60 @@
+// Variable Column Spacing is in Main
+
+.cat_outer_frame
+    padding: 0
+    position: relative
+    z-index: 5
+    background: #fff
+    margin: 0
+    width: calc(33.33% - #{$columnSpacing})
+    box-sizing: border-box
+    border: 0
+    margin-right: $columnSpacing
+    margin-bottom: $columnSpacing
+    transition: ease all 400ms
+
+    &:hover, &:active
+        border: 0
+        box-shadow: 0 0 20px rgba(0,0,0,.2)
+        .cat_title_frame
+            background-color: $lightred
+            border-color: #fff
+            &::before
+                opacity: 1
+                transform: translateX(-50%)       
+                width: 100%         
+    
+    .cat_image_frame
+        height: 100%
+        width: 100%
+        background-size: cover
+        border: 1px solid $borders
+        box-sizing: border-box
+
+    .cat_title_frame
+        box-sizing: border-box
+        background-color: $grey
+        color: #fff
+        opacity: 1
+        position: absolute
+        top: auto
+        bottom: 0
+        border: 0
+        width: calc(100% - 2px)
+        &::before 
+            content:""
+            position: absolute
+            left: 50%
+            top: 0
+            height: 2px
+            width: 0
+            background: #fff
+            z-index: 3
+            transform: scaleX(0) translateX(-50%)
+            transform-origin: center
+            opacity: 0
+            transition: ease all 400ms
+
+        h3 
+            color: #fff
+            font-weight: 300

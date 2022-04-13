@@ -2,10 +2,12 @@ $catBorderW: 5px
 
 .user_content
     .cat-header
+        margin-top: -2em
         display: flex
         align-items: stretch
         flex-wrap: wrap
-        margin-bottom: $catBorderW
+        margin-bottom: calc(-2em + #{$catBorderW})
+
         div 
             box-sizing: border-box
         .cat-headline
@@ -52,16 +54,19 @@ $catBorderW: 5px
     .cat-image-holder
         display: flex
         flex-wrap: wrap
+        margin-top: 2em
+        margin-bottom: -1em
         div 
             box-sizing: border-box
         .image-holder 
             position: relative
-            img 
+            overflow: hidden
+            img, img.img-fullsize
                 position: absolute
                 top: 0
                 left: 0
-                height: 100%
-                width: 100%
+                height: 100% !important
+                width: 100% !important
                 object-fit: cover 
 
         .big-image-text
@@ -81,6 +86,7 @@ $catBorderW: 5px
                 font-size: 1.5em
                 margin-right: auto
                 max-width: 350px
+                width: calc(100% - 40px)
 
 
 
@@ -92,3 +98,30 @@ $catBorderW: 5px
                 &:last-child
                     border-top: $catBorderW solid #fff
                     height: 55%
+
+
+@media (max-width: 710px)
+    .user_content
+        .cat-image-holder
+            .big-image-text
+                width: 100%
+                border: 0
+            .cat-sm-images
+                display: none
+
+@media (max-width: 600px)
+    .user_content
+        .cat-header
+            flex-direction: column-reverse
+            .cat-headline
+                width: 100%
+                border-right: 0
+            div:last-child
+                width: 100%
+                border-bottom: $catBorderW solid #fff
+                text-align: left
+                align-items: flex-start
+        .cat-image-holder
+            .big-image-text
+                padding-bottom: 50%
+

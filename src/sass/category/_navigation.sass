@@ -1,0 +1,44 @@
+#template_left_column
+    .template_sidebar_container
+        background: $lightbg
+        padding: 20px
+
+        h4
+            padding: 0 0 .5em 0
+            border-bottom: 1px solid $lightgrey
+            color: $lightred
+
+        ul
+            overflow: hidden
+            li
+                padding-left: 0
+                padding-right: 0
+                border-bottom: 1px solid $lightgrey
+                overflow: visible
+                &:hover 
+                    > a 
+                        color: #fff
+                        border-radius: 3px
+                    > a::before
+                        transform: scale(1)
+                        opacity: 1
+                        
+                > a
+                    position: relative
+                    z-index: 2
+                    transition: ease all 400ms
+                    &::before
+                        content:""
+                        position: absolute
+                        left: 0
+                        top: 0
+                        height: 100%
+                        width: 100%
+                        background: $lightred
+                        z-index: -1
+                        border-radius: 3px
+                        box-shadow: 0 6px 10px rgba(0,0,0,.2)
+                        transform: scale(.6) translateX(-30px)
+                        transform-origin: left
+                        opacity: 0
+                        transition: ease all 400ms
