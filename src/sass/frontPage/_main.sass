@@ -1,0 +1,36 @@
+@import './starterCols', './shopBereiche', './shopBereicheServices', './infoText'
+
+body.is-dev .template_wrapper-wrap
+    overflow-x: hidden
+
+
+.user_content .inner-content-row 
+    padding-left: 10px
+    padding-right: 10px
+
+.user_content .inner-content-row *
+    box-sizing: border-box
+
+.grey-bg
+    background: $lightbg
+    position: relative
+    z-index: 5
+    &::before, &::after
+        content:""
+        background: $lightbg
+        width: 100vw
+        height: 100%
+        top: 0
+        position: absolute
+        z-index: -1
+    &::before
+        right: 100%
+    &::after
+        left: 100%
+
+
+// SPACINGS
+.angebote, .shop-bereiche, .services
+    padding: 75px 0
+
+    

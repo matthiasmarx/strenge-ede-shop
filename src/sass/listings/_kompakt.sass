@@ -1,0 +1,20 @@
+body 
+    .art_shortlist
+        background: $lightbg
+        border-bottom: 2px solid transparent  
+        height: auto
+        margin-bottom: 5px 
+        transition: ease all 300ms
+        &:hover 
+            border-bottom-color: rgba(0,0,0,.2)
+            background: $lightred
+            color: #fff
+            .artname, .artdetail
+                color: white
+            
+        .artname
+            font-weight: $black
+            font-size: 15px
+            color: $textColor
+        .artdetail
+            opacity: .9

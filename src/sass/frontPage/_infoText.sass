@@ -1,0 +1,25 @@
+.info-text
+    padding-bottom: 75px
+    display: flex
+    flex-wrap: wrap
+    align-items: stretch
+    .col-50
+        width: 50%
+        > img 
+            height: 100%
+            object-fit: cover
+            max-width: 100%
+            width: 100%
+        &:first-child
+            padding-right: 40px
+        
+        h2
+            margin-top: 0
+
+
+@media (max-width: 992px)
+    .info-text
+        .col-50
+            width: 100%
+            >img 
+                margin-top: 2em

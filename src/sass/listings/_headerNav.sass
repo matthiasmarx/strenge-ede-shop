@@ -1,0 +1,35 @@
+.list_box
+    border-bottom: 3px solid $lightred
+    margin-bottom: 0 
+    padding: 10px 
+    background: $lightbg
+    .popup_cont:first-child .popup_toggle 
+        > a 
+            background: white
+            border-bottom: 0
+            border: 1px solid $borders 
+            color: $lightred
+            margin-right: 5px
+            padding: 5px
+            font-weight: $black
+            &.active
+                background: $lightred 
+                color: #fff 
+        ~ .popup_div > a
+            background: $lightred
+            border-bottom: 0 
+            color: white
+            margin-bottom: 5px 
+            &.active
+                background: $lightred 
+                color: #fff 
+    .popup_cont:not(:first-child) .popup_div 
+        > a 
+            
+            &.active
+                background: $lightred 
+                border-bottom: 0 
+                color: white
+
+.list-box:last-of-type
+    margin-top: 10px 
