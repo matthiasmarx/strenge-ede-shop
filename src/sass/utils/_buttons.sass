@@ -33,9 +33,10 @@ input[type="submit"], input[type="button"], button, .button, .submit
         background: $lightred
         
 
-.btn
+.btn, #addWarenkorbButton, #addAnfrageButton
     display: block
     text-decoration: none
+    text-align: center
     font-weight: $black
     padding: 10px 30px
     border-radius: 40px
@@ -43,12 +44,23 @@ input[type="submit"], input[type="button"], button, .button, .submit
     border: 3px solid $lightred
     background: $lightred
     transition: ease all 400ms
+    &.addtocart, &.inquire
+        padding-left: 10px
+        padding-right: 10px
+    &.inquire
+        background: $lightgrey
+        border-width: 1px
+        border-color: $grey
+        color: $darkblue
+                
     &.btn-white
         color: $darkblue
         border: 3px solid white
         background: white
         &:hover
             color: white
+    &.addtocart:hover
+        color: $lightred
     &:hover
         background: transparent
         

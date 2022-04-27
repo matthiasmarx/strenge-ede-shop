@@ -1,0 +1,54 @@
+$borderSpace: 10px
+
+.artlist_outer_frame 
+    margin-bottom: $borderSpace
+    border-bottom: 0
+    padding: 0
+    border-left: 0
+    a
+        display: flex
+        align-items: stretch
+        justify-content: space-between
+    .artlist_title_frame, .artlist_preis_frame
+       background: $lightbg 
+    .artlist_preis_frame, .artlist_image_frame
+        width: calc(25% - #{$borderSpace})
+    .artlist_preis_frame
+        margin-left: $borderSpace
+
+
+    .artlist_image_frame
+        border: 1px solid $borders
+        height: auto
+    .artlist_title_frame
+        padding: 15px
+        > b:first-child 
+            font-size: 1.3em
+            color: $darkblue
+
+
+@media only screen and (max-width: 60em)
+    .artlist_title_frame
+        width: 50%
+
+@media only screen and (max-width: 670px)
+    .artlist_outer_frame
+        a
+            flex-wrap: wrap
+            *
+                box-sizing: border-box
+        
+        .artlist_title_frame
+            width: 70%
+            margin: 0
+            border-left: calc(#{$borderSpace} / 2) solid white
+        .artlist_image_frame
+            width: 30%
+        .artlist_preis_frame
+            width: 100%
+            margin: 0
+            margin-top: calc(#{$borderSpace} / 2)
+            padding: 15px
+            .preis_list_preis
+                margin-top: 0 !important
+    

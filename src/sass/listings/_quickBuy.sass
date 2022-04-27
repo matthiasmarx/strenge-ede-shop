@@ -1,0 +1,29 @@
+$borderSpace: 10px
+    
+form[name="multi_warenkorb"]
+    .submit_green.addWarenkorb
+        background: $lightred
+        border-radius: 50px
+        border-bottom: 0
+        border: 2px solid $lightred
+        font-weight: $normal
+        &:hover
+            background: white
+            color: $lightred
+            
+
+.quickbuy_list
+    margin-bottom: $borderSpace
+    td:not(.quickbuy_list_image)
+       border-bottom: 0
+       background: $lightbg 
+    .quickbuy_list_image
+        border: 1px solid $borders
+    .quickbuy_list_details
+        padding: 15px
+        .mobile_hide_mini a > b 
+            font-size: 1.3em
+            color: $darkblue
+
+    .quickbuy_list_preis
+        border-left: $borderSpace solid white

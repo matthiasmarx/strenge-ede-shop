@@ -87,7 +87,7 @@ const cssInspector = () => {
         // Write sourcemap
         .pipe(gulpif(!isProduction(), sourcemaps.write('')))
         // Write everything to destination folder
-        .pipe(gulp.dest(`${dest}/inspector:/strenge.ede-shop.de/`));
+        .pipe(gulp.dest(`${dest}/css/inspector%3a/strenge.ede-shop.de/`));
 };
 
 
