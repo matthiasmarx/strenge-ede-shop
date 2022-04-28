@@ -81,7 +81,7 @@ typings/
 # Nuxt.js build / generate output
 .nuxt
 # dist
-dist/css/inspector*
+dist/css/inspector%3a
 dist/assets
 dist/js
 dist/benutzerdaten
