@@ -77,3 +77,41 @@
             transform: rotate(45deg) translate(0, 4px)
             z-index: -1
             border-radius: 2px
+
+
+@media only screen and (max-width: 60em)
+    #template_header 
+        .popup_content_cart
+            right: 0
+        .popup_content_account
+            right: -65px
+        .popup_content_menu 
+            left: -220px
+            &:after
+                left: auto
+                right: 65px
+
+@media only screen and (max-width: 30em)
+    #template_header
+        #template_header_list 
+            background: $grey
+            justify-content: space-between
+            .template_header_item a > i
+                margin: 0
+                top: 0
+            .popup_content_search
+                left: 0
+                top: -85px
+                width: 280px
+                height: 50px !important
+                .ajax_search_text
+                    border: 0
+                    box-shadow: none
+            .popup_content_menu
+                left: -60px
+                
+            .popup_content_account
+                top: -355px
+                right: -72px
+            .popup_content_cart
+                top: -355px

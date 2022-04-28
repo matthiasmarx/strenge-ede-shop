@@ -1,0 +1,38 @@
+#template_header #template_main_nav .popup_div[data-id="0"]
+
+    padding: 0
+#template_header 
+    #template_main_nav
+        .template_wgprev_heading
+            color: $darkblue
+            border-bottom: 1px solid $borders
+            border-right: 1px solid $borders
+            position: relative
+            padding: 3px 30px
+            box-sizing: border-box
+            font-size: 14px
+            .mdi
+                font-size: 25px
+
+            &:hover
+                background: $lightred
+                color: white !important
+                border-bottom-color: $lightred
+                border-right-color: $lightred
+                .mdi
+                    color: white
+            &::before
+                content: ""
+                position: absolute
+                left: 23px
+                top: 50%
+                transform: translate(0,-50%)
+                height: 10px
+                width: 10px
+                border-radius: 2px
+                background: $grey
+                transition: ease all 400ms
+            &:hover::before 
+                transform: translate(-40px,-50%) scale(0)
+                opacity: 0
+

@@ -1,0 +1,39 @@
+@import './checkout'
+    
+#cartform
+    .padding
+        padding: 10px
+    tr.mobile_wk_toggle
+        border-bottom: 10px solid white
+        td 
+            background: $lightbg
+            &:first-child
+                background: white
+                border: 1px solid $borders !important
+    td
+        border-color: white !important
+        border-width: 2px !important
+    // Right Column in Warenkorb
+    td.padding.mobile_widthfix.mobile_hide_mini
+        background: $lightbg !important
+        table b
+            color: $darkblue
+    tr.mobile_wk_toggle td:first-child
+        background: transparent 
+
+// Unv. Anfrage Btm
+.wk_anf_right
+    button.warenkorb_button 
+        margin-bottom: 40px
+        border-radius: 40px
+        border: 0
+
+// Funktionen
+body .cartitems
+    background: $grey
+    color: #fff
+    button
+        background: $lightred
+        color: #fff
+        border-bottom: 0
+        border-radius: 30px

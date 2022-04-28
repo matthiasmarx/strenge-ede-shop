@@ -33,7 +33,7 @@ input[type="submit"], input[type="button"], button, .button, .submit
         background: $lightred
         
 
-.btn, #addWarenkorbButton, #addAnfrageButton
+.btn, #addWarenkorbButton, #addAnfrageButton, #kasse_button, button.submit_green
     display: block
     text-decoration: none
     text-align: center
@@ -59,8 +59,18 @@ input[type="submit"], input[type="button"], button, .button, .submit
         background: white
         &:hover
             color: white
-    &.addtocart:hover
+    &.btn_continue_checkout
+        margin-bottom: 10px
+    &.addtocart:hover, &.btn_continue_checkout:hover
         color: $lightred
     &:hover
         background: transparent
         
+button.submit_green
+    padding: 10px 10px
+    &:hover
+        color: $lightred
+
+input[type="submit"].wide, input[type="button"].wide, button.wide, .button.wide, .submit.wide, input[type="submit"], button, .button, .submit
+    border: 0
+    border-radius: 30px
