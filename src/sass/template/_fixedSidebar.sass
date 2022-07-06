@@ -1,0 +1,35 @@
+.sidebar_widget_html
+    background: transparent 
+    box-shadow: none
+    padding: 0
+    top: 50%
+    transform: translateY(-50%)
+    .admin_edit_tools
+        display: none
+
+
+
+.sidebar-icons
+    >.sidebar-icon
+        background: $lightred
+        padding: .75em
+        display: flex
+        align-items: center
+        justify-content: center
+        aspect-ratio: 1/1
+        border-radius: 5px 0 0 4px
+        transition: ease all 400ms
+        &:not(:last-child) 
+            margin-bottom: 10px
+        &:hover 
+            background: $blue
+        > img 
+            display: block
+            max-width: 25px
+
+
+@media  screen and (max-width: 768px)
+    .sidebar-icons
+        >.sidebar-icon
+            >img
+                max-width: 25px
